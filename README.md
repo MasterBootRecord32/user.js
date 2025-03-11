@@ -1,0 +1,29 @@
+# Presentation
+My Firefox configuration that allies privacy to practicality and simplicity. This user.js file is based on the work of <a href="https://github.com/yokoffing"> Yokoffing </a> on <a href="https://github.com/yokoffing/Betterfox"> Betterfox </a>, to which I've applied a series of modifications. 
+
+# Features
+**Coming Soon**
+
+# Installation
+1. Backup your profile :
+  - Open Firefox and go to `about:profiles` ;
+  - Check for your actual active profile ("Default Profile" should be "yes") ;
+  - On the line displaying "Root Directory", click "Open Directory" ;
+  - Close Firefox and copy all the directory's content ;
+  - Go to this profile's parent directory in your file manager and create a new folder ;
+  - Paste the contents into it ;
+  - Rename the folder after the name of your profile (for a profile called `kshj81bf.default`, the backup copy might be called `kshj81bf.default.bak`).
+2. Clone this repository in you home directory ;
+3. Review the file's content and make changes if needed ;
+4. Move `user.js` to your user's firefox profile directory :
+  - Open back Firefox and go to `about:profiles` ;
+  - For the profile you want to use, on the line displaying "Root Directory", click "Open Directory" ;
+  - Paste the user.js file in the directory ;
+5. Restart Firefox.
+
+# Credits
+- <a href="https://github.com/yokoffing"> Yokoffing </a> for his work on <a href="https://github.com/yokoffing/Betterfox"> Betterfox </a>;
+- <a href="https://www.mozilla.org/en-US/firefox/new/"> The Firefox Team </a> for their amazing work on this browser ;
+
+# WARNING !
+THIS CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE CODE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE CODE OR THE USE OR OTHER DEALINGS IN THE CODE.
