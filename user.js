@@ -118,6 +118,7 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 
 /** CONTAINERS ***/
 user_pref("privacy.userContext.ui.enabled", true);
+user_pref("privacy.userContext.enabled", true);
 
 /** SAFE BROWSING ***/
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
@@ -140,6 +141,7 @@ user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
+user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("toolkit.telemetry.coverage.opt-out", true);
 user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.coverage.endpoint.base", "");
@@ -172,7 +174,6 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.preferences.moreFromMozilla", false);
-user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.aboutwelcome.enabled", false);
 user_pref("browser.profiles.enabled", true);
 
@@ -199,6 +200,7 @@ user_pref("browser.urlbar.trending.featureGate", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.showWeather", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 
 /** POCKET ***/
 user_pref("extensions.pocket.enabled", false);
@@ -226,8 +228,32 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 
+//PREF: disable passwords autofill in forms
+user_pref("signon.autofillForms", false);
+
 // PREF: block all third-party cookies
 user_pref("network.cookie.cookieBehavior", 1);
+
+// PREF: always ask before downloading new file types
+user_pref("browser.download.always_ask_before_handling_new_types", true)
+
+// PREF: disable Google Safe-Browsing
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+
+// PREF: restore Firefox previous session
+user_pref("browser.startup.page", 3);
+
+// PREF: disable search suggestions
+user_pref("browser.urlbar.suggest.engines", false);
+user_pref("browser.urlbar.suggest.history", false);
+user_pref("browser.urlbar.suggest.topsites", false);
+user_pref("browser.urlbar.suggest.trending", false);
+user_pref("browser.urlbar.suggest.weather", false);
+user_pref("browser.urlbar.suggest.yelp", false);
+
+// PREF: prevent websites to detect battery on laptops
+user_pref("dom.battery.enabled", false);
 
 // PREF: enable HTTPS-Only Mode
 // Warn me before loading sites that don't support HTTPS
@@ -235,10 +261,25 @@ user_pref("network.cookie.cookieBehavior", 1);
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
 
+// PREF: disable Firefox privacy-preserving attribution
+user_pref("dom.private-attribution.submission.enabled", false);
+
+// PREF: prevent cross-site scripts security bugs
+user_pref("dom.security.sanitizer.enabled", true);
+
+// PREF: force disable media autoplay on websites
+user_pref("media.autoplay.blocking_policy", 2);
+user_pref("media.autoplay.default", 5);
+
+// PREF: prevent WebRTC leaking
+user_pref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.ice.default_address_only", false);
+user_pref("media.navigator.enabled", false);
+
 // PREF: set DoH provider
 user_pref("network.trr.uri", "https://adblock.dns.mullvad.net/dns-query");
 user_pref("network.trr.custom_uri", "https://adblock.dns.mullvad.net/dns-query");
-user_pref("network.trr.default_provider_uri", "https://adblock.dns.mullvad.net/dns-query")
+user_pref("network.trr.default_provider_uri", "https://dns.mullvad.net/dns-query");
 
 // PREF: enforce DNS-over-HTTPS (DoH)
 user_pref("network.trr.mode", 3);
@@ -246,6 +287,19 @@ user_pref("network.trr.mode", 3);
 // PREF: do not send referer when cross-origin
 user_pref("network.http.referer.defaultPolicy.trackers", 1);
 user_pref("network.http.referer.defaultPolicy.trackers.pbmode", 1);
+user_pref("network.http.referer.disallowCrossSiteRelaxingDefault.top_navigation", true);
+
+// PREF: enable Firefox query stripping
+user_pref("privacy.query_stripping.enabled", true);
+user_pref("privacy.query_stripping.enabled.pbmode", true);
+
+// PREF: enable Firefox tracking protection
+user_pref("privacy.trackingprotection.enabled", true);
+user_pref("privacy.trackingprotection.emailtracking.enabled", true);
+user_pref("privacy.trackingprotection.socialtracking.enabled", true);
+
+// PREF: enable Firefox fingerprinting protection
+user_pref("privacy.fingerprintingProtection", true);
 
 // PREF: enable resistFingerprinting in all private browsing windows
 user_pref("privacy.resistFingerprinting.pbmode", true);
@@ -264,6 +318,8 @@ user_pref("security.cert_pinning.enforcement_level", 2);
 
 // PREF: delete cookies, cache, and site data on shutdown
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.clearOnShutdown.downloads", true);
+user_pref("privacy.clearOnShutdown.offlineApps", true);
 user_pref("privacy.clearOnShutdown_v2.cache", true); // DEFAULT
 user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // DEFAULT
 user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false);
@@ -281,7 +337,8 @@ user_pref("browser.eme.ui.enabled", false);
 user_pref("browser.policies.runOncePerModification.setDefaultSearchEngine", "DuckDuckGo");
 user_pref("browser.policies.runOncePerModification.removeSearchEngines", ["Google","Bing","Amazon.com","eBay","Twitter"]);
 
-user_pref("intl.accept_languages", "en-US, en")
+// PREF: spoof en-US as default language
+user_pref("privacy.spoof_english", 2);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
