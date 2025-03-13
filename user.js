@@ -295,14 +295,3 @@ user_pref("apz.gtk.kinetic_scroll.enabled", false);
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
-
-/****************************************************************************
- * SECTION: Firefox GNOME Theme                                                       *
-****************************************************************************/
-// visit https://github.com/rafaelmardojai/firefox-gnome-theme/
- 
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("browser.uidensity", 0);
-user_pref("svg.context-properties.content.enabled", true);
-user_pref("browser.theme.dark-private-windows", false);
-user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
