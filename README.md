@@ -1,5 +1,5 @@
 # Presentation
-My Firefox configuration that allies privacy to practicality and simplicity. This user.js file is based on the work of <a href="https://github.com/yokoffing"> Yokoffing </a> on <a href="https://github.com/yokoffing/Betterfox"> Betterfox </a>, to which I've applied a series of modifications. 
+My Firefox configuration that allies privacy to practicality and simplicity. This user.js file is based on the work of <a href="https://github.com/yokoffing"> Yokoffing </a> on <a href="https://github.com/yokoffing/Betterfox"> Betterfox </a>, to which I've applied a series of tested modifications. 
 
 # Features
 **Coming Soon**
@@ -21,9 +21,15 @@ My Firefox configuration that allies privacy to practicality and simplicity. Thi
   - Paste the user.js file in the directory ;
 5. Restart Firefox.
 
+# Test the configuration
+You can test your Firefox configuration from a privacy standpoint using the Electronic Frontier Foundation's <a href="https://coveryourtracks.eff.org/"> tracker and fingerprinting test </a>.
+
 # Credits
-- <a href="https://github.com/yokoffing"> Yokoffing </a> for his work on <a href="https://github.com/yokoffing/Betterfox"> Betterfox </a>;
+- <a href="https://github.com/yokoffing"> Yokoffing </a> for their work on <a href="https://github.com/yokoffing/Betterfox"> Betterfox </a>;
+- <a href="https://github.com/arkenfox"> Arkenfox </a> for their work on <a href="https://github.com/arkenfox/user.js/"> Arkenfox User.js </a>;
 - <a href="https://www.mozilla.org/en-US/firefox/new/"> The Firefox Team </a> for their amazing work on this browser ;
+- <a href="https://eff.org/"> The Electronic Frontier Foundation for their comprehensive <a href="https://coveryourtracks.eff.org/"> tracker and fingerprinting test </a>;
+- 
 
 # WARNING !
 THIS CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE CODE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE CODE OR THE USE OR OTHER DEALINGS IN THE CODE.
