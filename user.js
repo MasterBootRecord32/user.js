@@ -132,6 +132,7 @@ user_pref("permissions.manager.defaultsUrl", "");
 /** TELEMETRY ***/
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("datareporting.usage.uploadEnabled", false);
 user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.server", "data:,");
@@ -174,7 +175,7 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.preferences.moreFromMozilla", false);
-user_pref("browser.aboutwelcome.enabled", false);
+user_pref("browser.aboutwelcome.enabled", true);
 user_pref("browser.profiles.enabled", true);
 
 /** THEME ADJUSTMENTS ***/
@@ -235,7 +236,7 @@ user_pref("signon.autofillForms", false);
 user_pref("network.cookie.cookieBehavior", 1);
 
 // PREF: always ask before downloading new file types
-user_pref("browser.download.always_ask_before_handling_new_types", true)
+user_pref("browser.download.always_ask_before_handling_new_types", true);
 
 // PREF: disable Google Safe-Browsing
 user_pref("browser.safebrowsing.malware.enabled", false);
@@ -256,8 +257,6 @@ user_pref("browser.urlbar.suggest.yelp", false);
 user_pref("dom.battery.enabled", false);
 
 // PREF: enable HTTPS-Only Mode
-// Warn me before loading sites that don't support HTTPS
-// in both Normal and Private Browsing windows.
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
 
@@ -311,34 +310,35 @@ user_pref("privacy.resistFingerprinting.testing.setTZtoUTC", true);
 user_pref("browser.download.useDownloadDir", false);
 
 // PREF: enforce certificate pinning
-// [ERROR] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
-// 1 = allow user MiTM (such as your antivirus) (default)
-// 2 = strict
 user_pref("security.cert_pinning.enforcement_level", 2);
 
 // PREF: delete cookies, cache, and site data on shutdown
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown.downloads", true);
 user_pref("privacy.clearOnShutdown.offlineApps", true);
+user_pref("privacy.clearOnShutdown.siteSettings", true);
 user_pref("privacy.clearOnShutdown_v2.cache", true); // DEFAULT
 user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // DEFAULT
-user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false);
+user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false);
 
-// PREF: disable all DRM content
+// PREF: disable all DRM content, disable the DRM prompt and hide the setting 
 user_pref("media.eme.enabled", false);
+user_pref("browser.eme.ui.enabled", false);
 
 // PREF: disable AI chatbot
 user_pref("browser.ml.chat.enabled", false);
-
-// PREF: hide the setting; this also disables the DRM prompt (optional)
-user_pref("browser.eme.ui.enabled", false);
 
 // PREF: set DuckDuckGo as default search engine and remove non-private search engines
 user_pref("browser.policies.runOncePerModification.setDefaultSearchEngine", "DuckDuckGo");
 user_pref("browser.policies.runOncePerModification.removeSearchEngines", ["Google","Bing","Amazon.com","eBay","Twitter"]);
 
+
 // PREF: spoof en-US as default language
 user_pref("privacy.spoof_english", 2);
+
+// PREF: bottom rounded corners on GNOME
+user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
@@ -346,8 +346,24 @@ user_pref("privacy.spoof_english", 2);
 // visit https://github.com/yokoffing/Betterfox/blob/main/Smoothfox.js
 // Enter your scrolling overrides below this line:
 
-// PREF: disable kinetic scroll
-user_pref("apz.gtk.kinetic_scroll.enabled", false);
+// PREF: enable kinetic scroll on GTK environment
+user_pref("apz.gtk.kinetic_scroll.enabled", true);
+
+//PREF: adjust scroll speed for GTK environment
+user_pref("apz.gtk.kinetic_scroll.delta_mode", 2);
+user_pref("apz.gtk.pangesture.delta_mode", 2);
+user_pref("apz.gtk.kinetic_scroll.pixel_delta_mode_multiplier", "30");
+user_pref("apz.gtk.pangesture.pixel_delta_mode_multiplier", "30");
+user_pref("apz.fling_friction", "0.004");
+
+// PREF: enable smooth scroll on mouse
+user_pref("general.smoothScroll.mouseWheel", true);
+
+// PREF: enable autoscroll
+user_pref("general.autoScroll", true);
+
+// PREF: overscroll effect
+user_pref("apz.overscroll.enabled", true);
 
 /****************************************************************************
  * END: BETTERFOX                                                           *
