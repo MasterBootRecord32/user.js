@@ -333,12 +333,14 @@ user_pref("browser.ml.chat.enabled", false);
 user_pref("browser.policies.runOncePerModification.setDefaultSearchEngine", "DuckDuckGo");
 user_pref("browser.policies.runOncePerModification.removeSearchEngines", ["Google","Bing","Amazon.com","eBay","Twitter"]);
 
-
 // PREF: spoof en-US as default language
 user_pref("privacy.spoof_english", 2);
 
-// PREF: bottom rounded corners on GNOME
+// PREF: bottom rounded corners on GTK environment
 user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
+
+// PREF: enable GTK4 file picker on GTK environment
+user_pref("widget.use-xdg-desktop-portal.file-picker", "1")
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
