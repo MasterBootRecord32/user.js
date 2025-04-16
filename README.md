@@ -2,7 +2,10 @@
 My Firefox configuration that allies privacy to practicality and simplicity. This user.js file is based on the work of <a href="https://github.com/yokoffing"> Yokoffing </a> on <a href="https://github.com/yokoffing/Betterfox"> Betterfox </a>, to which I've applied a series of tested modifications. 
 
 # Features
-**Coming Soon**
+- Increased speed for modern browsing experience, even on bloated sites;
+- Better privacy than with default config (language spoofing, timezone spoofing in pb mode, strict tracking protection, Mullvad DoH, disabled Google Safe Browsing, HTTPS only, clear data on shutdown, no DRM, etc);
+- Disable useless features for a distraction-free browsing experience (pocket, ai features, sponsored sites);
+- Enhanced smooth scrolling (kinetic scrolling, adjusted sensitivity and speed).
 
 # Installation
 1. Backup your profile :
