@@ -315,10 +315,15 @@ user_pref("security.cert_pinning.enforcement_level", 2);
 // PREF: delete cookies, cache, and site data on shutdown
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown.downloads", true);
+user_pref("privacy.clearOnShutdown.history", true);
 user_pref("privacy.clearOnShutdown.offlineApps", true);
 user_pref("privacy.clearOnShutdown.siteSettings", true);
-user_pref("privacy.clearOnShutdown_v2.cache", true); // DEFAULT
-user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // DEFAULT
+user_pref("privacy.clearOnShutdown.sessions", false);
+user_pref("privacy.clearOnShutdown_v2.cache", true);
+user_pref("privacy.clearOnShutdown_v2.downloads", true);
+user_pref("privacy.clearOnShutdown_v2.formdata", true);
+user_pref("privacy.clearOnShutdown_v2.siteSettings", true);
+user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
 user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true);
 user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false);
 
