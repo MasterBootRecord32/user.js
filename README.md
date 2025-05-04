@@ -16,7 +16,7 @@ My Firefox configuration that allies privacy to practicality and simplicity. Thi
   - Go to this profile's parent directory in your file manager and create a new folder ;
   - Paste the contents into it ;
   - Rename the folder after the name of your profile (for a profile called `kshj81bf.default`, the backup copy might be called `kshj81bf.default.bak`).
-2. Clone this repository in you home directory ;
+2. Clone this repository in your home directory ;
 3. Review the file's content and make changes if needed ;
 4. Move `user.js` to your user's firefox profile directory :
   - Open back Firefox and go to `about:profiles` ;
