@@ -11,7 +11,8 @@
  * Betterfox                                                                *
  * "Ad meliora"                                                             *
  * version: 137                                                             *
- * url: https://github.com/yokoffing/Betterfox                              *
+ * url: https://github.com/MasterBootRecord32/user.js
+ * forked from: https://github.com/yokoffing/Betterfox
 ****************************************************************************/
 
 /****************************************************************************
