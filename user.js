@@ -10,7 +10,7 @@
 /****************************************************************************
  * Betterfox                                                                *
  * "Ad meliora"                                                             *
- * version: 135                                                            *
+ * version: 137                                                             *
  * url: https://github.com/yokoffing/Betterfox                              *
 ****************************************************************************/
 
@@ -58,8 +58,6 @@ user_pref("layout.css.grid-template-masonry-value.enabled", true);
 ****************************************************************************/
 /** TRACKING PROTECTION ***/
 user_pref("browser.contentblocking.category", "custom");
-user_pref("urlclassifier.trackingSkipURLs", "");
-user_pref("urlclassifier.features.socialtracking.skipURLs", "");
 user_pref("browser.download.start_downloads_in_tmp_dir", true);
 user_pref("browser.helperApps.deleteTempFileOnExit", true);
 user_pref("browser.uitour.enabled", false);
@@ -67,7 +65,6 @@ user_pref("privacy.globalprivacycontrol.enabled", true);
 
 /** OCSP & CERTS / HPKP ***/
 user_pref("security.OCSP.enabled", 0);
-user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
 
 /** SSL / TLS ***/
@@ -92,12 +89,7 @@ user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.groupLabels.enabled", false);
 user_pref("browser.formfill.enable", false);
-user_pref("security.insecure_connection_text.enabled", true);
-user_pref("security.insecure_connection_text.pbmode.enabled", true);
 user_pref("network.IDN_show_punycode", true);
-
-/** HTTPS-FIRST POLICY ***/
-user_pref("dom.security.https_first", true);
 
 /** PASSWORDS ***/
 user_pref("signon.formlessCapture.enabled", false);
@@ -126,6 +118,7 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 /** MOZILLA ***/
 user_pref("permissions.default.desktop-notification", 2);
 user_pref("permissions.default.geo", 2);
+user_pref("geo.provider.network.url", "https://beacondb.net/v1/geolocate");
 user_pref("browser.search.update", false);
 user_pref("permissions.manager.defaultsUrl", "");
 
@@ -175,6 +168,7 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.preferences.moreFromMozilla", false);
+user_pref("browser.aboutConfig.showWarning", true);
 user_pref("browser.aboutwelcome.enabled", true);
 user_pref("browser.profiles.enabled", true);
 
@@ -196,6 +190,7 @@ user_pref("full-screen-api.warning.timeout", 0);
 user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("browser.urlbar.unitConversion.enabled", true);
 user_pref("browser.urlbar.trending.featureGate", false);
+user_pref("dom.text_fragments.create_text_fragment.enabled", true);
 
 /** NEW TAB PAGE ***/
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
