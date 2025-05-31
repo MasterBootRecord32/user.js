@@ -269,6 +269,8 @@ user_pref("media.autoplay.default", 5);
 // PREF: prevent WebRTC leaking
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.peerconnection.ice.default_address_only", false);
+
+// PREF: prevent media devices detection
 user_pref("media.navigator.enabled", false);
 
 // PREF: set DoH provider
@@ -329,10 +331,6 @@ user_pref("browser.eme.ui.enabled", false);
 
 // PREF: disable AI chatbot
 user_pref("browser.ml.chat.enabled", false);
-
-// PREF: set DuckDuckGo as default search engine and remove non-private search engines
-user_pref("browser.policies.runOncePerModification.setDefaultSearchEngine", "DuckDuckGo");
-user_pref("browser.policies.runOncePerModification.removeSearchEngines", ["Google","Bing","Amazon.com","eBay","Twitter"]);
 
 // PREF: spoof en-US as default language
 user_pref("privacy.spoof_english", 2);
