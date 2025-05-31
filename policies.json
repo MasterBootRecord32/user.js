@@ -8,10 +8,9 @@
         "DisableFeedbackCommands": true,
         "DisablePocket": true,
         "DisableDeveloperTools": false,
-        "DontCheckDefaultBrowser": true,
         "DNSOverHTTPS": {
             "Enabled": true,
-            "ProviderURL": "https://dns.nextdns.io/241d27",
+            "ProviderURL": "https://adblock.dns.mullvad.net/dns-query",
             "Locked": false
         },
         "ManualAppUpdateOnly": false,
