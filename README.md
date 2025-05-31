@@ -3,9 +3,11 @@ My Firefox configuration that allies privacy to practicality and simplicity. Thi
 
 # Features
 - Increased speed for modern browsing experience, even on bloated sites;
-- Better privacy than with default config (language spoofing, timezone spoofing in pb mode, strict tracking protection, Mullvad DoH, disabled Google Safe Browsing, HTTPS only, clear data on shutdown, no DRM, etc);
+- Better privacy than with default config: language spoofing, timezone spoofing in pb mode, stricter custom tracking protection, Mullvad DoH, disabled Google's Safe Browsing, Location services set to a more private alternative, HTTPS only, clear data on shutdown, no DRM, etc);
 - Disable useless features for a distraction-free browsing experience (pocket, ai features, sponsored sites);
 - Enhanced smooth scrolling (kinetic scrolling, adjusted sensitivity and speed).
+
+**WARNING: some parameters I have applied in this compilation breaks certain websites (mainly video communication and social media platforms), mainly because of network.http.referer.XOriginTrimmingPolicy, media.navigator.enabled and browser.contentblocking.category having really strict values.**
 
 # Installation
 1. Backup your profile :
