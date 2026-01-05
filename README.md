@@ -3,14 +3,15 @@ My Firefox configuration that allies privacy to practicality and simplicity. Thi
 
 # Features
 - Increased speed for modern browsing experience, even on bloated sites;
-- Better privacy than with default config: language spoofing, timezone spoofing in pb mode, stricter custom tracking protection, Mullvad DoH, disabled Google's Safe Browsing, Location services set to a more private alternative, HTTPS only, clear data on shutdown, no DRM, etc);
+- Better privacy than with default config: language spoofing, timezone spoofing in pb mode, stricter custom tracking protection, Mullvad DoH, disabled Google's Safe Browsing, Location services set to a more private alternative, HTTPS only, clear most data on shutdown, no DRM, etc);
 - Disabled completely Mozilla's Telemetry;
 - Disabled useless features for a distraction-free and clean browsing experience (pocket, ai features, sponsored sites);
 - Removed non-private search engines and added more private ones (DuckDuckGo Lite, SearX.be instance, MetaGer and Startpage);
-- Maked uBlock Origin install itself automatically;
-- Enhanced smooth scrolling (kinetic scrolling, adjusted sensitivity and speed).
+- Made uBlock Origin install itself automatically;
+- Enhanced smooth scrolling (adjusted sensitivity and speed);
+- More options for GTK environments (GTK4 file picker, rounded corners, kinetic scrolling, etc).
 
-**WARNING: some parameters I have applied in this compilation breaks certain websites (mainly video communication and social media platforms), mainly because of `network.http.referer.XOriginTrimmingPolicy` being set to `2` and `media.navigator.enabled` being set to `false` as well as Enhanced Tracking Protection being set to Custom with strict settings.**
+**WARNING: some parameters may break some websites (such as social media platforms or websites requiring WebGL in Private Browsing mode).**
 
 # Installation
 ## For user.js
